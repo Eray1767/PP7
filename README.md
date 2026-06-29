@@ -90,18 +90,19 @@ In this exercise you will:
 
    * Run `./solutions/sample` and confirm it prints `Hello, PP7!`.
 6. **Explain** in comments or a short README how each stage transforms the code.
+
 1. Preprocessing (gcc -E)
-Der Präprozessor führt alle Anweisungen aus, die mit # beginnen.
+  Der Präprozessor führt alle Anweisungen aus, die mit # beginnen.
 
-Was passiert hier?
+  Was passiert hier?
 
-#include <stdio.h> wird durch den kompletten Inhalt der Header‑Datei ersetzt
+  #include <stdio.h> wird durch den kompletten Inhalt der Header‑Datei ersetzt
 
-Makros werden aufgelöst
+  Makros werden aufgelöst
 
-Kommentare werden entfernt
+  Kommentare werden entfernt
 
-Ergebnis:  
+ Ergebnis:  
 Eine große Textdatei (sample.i), die reinen C‑Code enthält, aber ohne Includes und Makros.
 
 2. Compilation zu Assembly (gcc -S)
