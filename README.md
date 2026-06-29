@@ -184,14 +184,14 @@ Ein ausführbares Programm entsteht
 grep durchsucht Dateien nach Mustern und zeigt passende Zeilen an.
 Es eignet sich gut, um schnell herauszufinden, wo bestimmte Funktionen vorkommen.
 
-sed führt Ersetzungen direkt im Text durch (stream editing).
-Ideal für automatisches, schnelles Suchen/Ersetzen in Dateien.
+  sed führt Ersetzungen direkt im Text durch (stream editing).
+  Ideal für automatisches, schnelles Suchen/Ersetzen in Dateien.
 
-awk ist ein Muster- und Textprozessor, der Zeilen analysiert und formatierte Ausgaben erzeugt.
-Perfekt, wenn man Zeilennummern oder bestimmte Felder ausgeben möchte.
+  awk ist ein Muster- und Textprozessor, der Zeilen analysiert und formatierte Ausgaben erzeugt.
+  Perfekt, wenn man Zeilennummern oder bestimmte Felder ausgeben möchte.
 
-Vim interaktiv erlaubt manuelles Suchen/Ersetzen und ist gut für kontrollierte Änderungen.
-Vim im CLI-Modus automatisiert dieselben Änderungen ohne Benutzeroberfläche.
+  Vim interaktiv erlaubt manuelles Suchen/Ersetzen und ist gut für kontrollierte Änderungen.
+  Vim im CLI-Modus automatisiert dieselben Änderungen ohne Benutzeroberfläche.
 ---
 
 ### Task 3: Modular Linking with `extern`
