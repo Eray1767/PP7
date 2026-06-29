@@ -234,11 +234,11 @@ Es eignet sich gut, um schnell herauszufinden, wo bestimmte Funktionen vorkommen
    * The role of `extern` declarations.
    * Why separating compilation can speed up builds.
    * How manual linking differs from letting `gcc` handle all steps in one command.
-   Beide Dateien wurden separat kompiliert: gcc -c add.c -o add.o gcc -c main.c -o main.o
 
-   Danach wurden die Objektdateien manuell gelinkt: gcc add.o main.o -o add_example
 
-   Beim Ausführen zeigt das Programm das Ergebnis der Addition.
+ Beide Dateien wurden separat kompiliert: gcc -c add.c -o add.o gcc -c main.c -o main.o
+Danach wurden die Objektdateien manuell gelinkt: gcc add.o main.o -o add_example
+Beim Ausführen zeigt das Programm das Ergebnis der Addition.
 ---
 
 **Remember:** Stop working after **90 minutes** and record where you stopped.
