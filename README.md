@@ -189,7 +189,6 @@ Es eignet sich gut, um schnell herauszufinden, wo bestimmte Funktionen vorkommen
 
   awk ist ein Muster- und Textprozessor, der Zeilen analysiert und formatierte Ausgaben erzeugt.
   Perfekt, wenn man Zeilennummern oder bestimmte Felder ausgeben möchte.
-
   Vim interaktiv erlaubt manuelles Suchen/Ersetzen und ist gut für kontrollierte Änderungen.
   Vim im CLI-Modus automatisiert dieselben Änderungen ohne Benutzeroberfläche.
 ---
