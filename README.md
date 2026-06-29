@@ -91,6 +91,8 @@ In this exercise you will:
    * Run `./solutions/sample` and confirm it prints `Hello, PP7!`.
 6. **Explain** in comments or a short README how each stage transforms the code.
 
+
+
 1. Preprocessing (gcc -E)
   Der Präprozessor führt alle Anweisungen aus, die mit # beginnen.
 
