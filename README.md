@@ -90,7 +90,56 @@ In this exercise you will:
 
    * Run `./solutions/sample` and confirm it prints `Hello, PP7!`.
 6. **Explain** in comments or a short README how each stage transforms the code.
+1. Preprocessing (gcc -E)
+Der Präprozessor führt alle Anweisungen aus, die mit # beginnen.
 
+Was passiert hier?
+
+#include <stdio.h> wird durch den kompletten Inhalt der Header‑Datei ersetzt
+
+Makros werden aufgelöst
+
+Kommentare werden entfernt
+
+Ergebnis:  
+Eine große Textdatei (sample.i), die reinen C‑Code enthält, aber ohne Includes und Makros.
+
+2. Compilation zu Assembly (gcc -S)
+Der Compiler übersetzt den präprozessierten C‑Code in Assembly‑Code.
+
+Was passiert hier?
+
+C‑Code wird analysiert
+
+Optimierungen werden angewendet
+
+Der Code wird in CPU‑spezifische Assembly‑Befehle übersetzt
+
+Ergebnis:  
+Eine .s‑Datei mit Assembly‑Instruktionen (z. B. mov, call, ret).
+
+3. Assembling (gcc -c)
+Der Assembler wandelt den Assembly‑Code in Maschinencode um.
+
+Was passiert hier?
+
+Assembly‑Befehle werden in Binärcode übersetzt
+
+Relocation‑Informationen werden erzeugt
+
+Ergebnis:  
+Eine Objektdatei (sample.o), die aber noch nicht ausführbar ist.
+
+4. Linking (ohne Flag, nur gcc sample.o -o sample)
+Der Linker verbindet alle Objektdateien und Bibliotheken zu einem fertigen Programm.
+
+Was passiert hier?
+
+sample.o wird mit der Standardbibliothek (z. B. libc) verknüpft
+
+Externe Symbole wie printf werden aufgelöst
+
+Ein ausführbares Programm entsteht
 ---
 
 ### Task 2: Regex Search & Replace in Code
@@ -131,7 +180,17 @@ In this exercise you will:
    vim -c ":%s/printf/debug_printf/g" -c ":wq" solutions/debug_sample.c
    ```
 7. **Explain** each tool’s approach to regex-based search and replace, and when you might prefer one over the others.
+grep durchsucht Dateien nach Mustern und zeigt passende Zeilen an.
+Es eignet sich gut, um schnell herauszufinden, wo bestimmte Funktionen vorkommen.
 
+sed führt Ersetzungen direkt im Text durch (stream editing).
+Ideal für automatisches, schnelles Suchen/Ersetzen in Dateien.
+
+awk ist ein Muster- und Textprozessor, der Zeilen analysiert und formatierte Ausgaben erzeugt.
+Perfekt, wenn man Zeilennummern oder bestimmte Felder ausgeben möchte.
+
+Vim interaktiv erlaubt manuelles Suchen/Ersetzen und ist gut für kontrollierte Änderungen.
+Vim im CLI-Modus automatisiert dieselben Änderungen ohne Benutzeroberfläche.
 ---
 
 ### Task 3: Modular Linking with `extern`
@@ -176,7 +235,11 @@ In this exercise you will:
    * The role of `extern` declarations.
    * Why separating compilation can speed up builds.
    * How manual linking differs from letting `gcc` handle all steps in one command.
+Beide Dateien wurden separat kompiliert: gcc -c add.c -o add.o gcc -c main.c -o main.o
 
+Danach wurden die Objektdateien manuell gelinkt: gcc add.o main.o -o add_example
+
+Beim Ausführen zeigt das Programm das Ergebnis der Addition.
 ---
 
 **Remember:** Stop working after **90 minutes** and record where you stopped.
